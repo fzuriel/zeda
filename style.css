@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
+    font-family: "Playfair Display", serif;
+}
+
+/* ----- Menú Lateral ----- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px; /* sácala completamente */
+    width: 250px;
+    height: 100vh;
+    background: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+.sidebar ul {
+    list-style: none;      /* Quitar puntos */
+    padding: 0;
+    margin: 0;
+    text-align: center;    /* Centrar texto */
+}
+
+.sidebar li {
+    padding: 12px 0;       /* Espaciado vertical */
+    font-size: 18px;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Fondo borroso */
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(12px);
+    background: rgba(0,0,0,0.25);
+    display: none;
+    z-index: 900;
+}
+.blur-overlay.active {
+    display: block;
+}
+
+/* ----- Header ----- */
+.header {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.title-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    margin: 0;
+    font-size: 40px;
+    letter-spacing: 3px;
+    transform: translateX(-43px);
+}
+
+.sub-title {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: 5px;
+    transform: translateX(-43px);
+}
+
+/* ----- Productos ----- */
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px;
+}
+
+.product-card {
+    text-align: center;
+    width: 280px;
+}
+
+/* Escalón */
+.middle {
+    margin-top: 80px;
+}
+
+/* Marco de fotos */
+.image-frame {
+    width: 100%;
+    height: 350px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.slogan {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 7px;
+    transform: translateX(-170px);
+}
+
+.slogan h2 {
+    font-family: "Elephant", serif; /* misma fuente */
+    font-size: 1.4rem;  /* ajusta como quieras */
+    letter-spacing: 1.3px;
+}
+.slogan2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    transform: translateX(170px);
+}
+
+.slogan2 h2 {
+    font-family: "Elephant", serif; /* misma fuente */
+    font-size: 1.4rem;  /* ajusta como quieras */
+    letter-spacing: 1.3px;
+}
+
+
+.image-frame img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Nombres */
+.product-name {
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* Selector de color */
+.color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    gap: 12px;
+}
+
+.color-box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.white { background: white; }
+.black { background: black; }
+
+/* ----- Responsive Móvil ----- */
+@media screen and (max-width: 820px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+
+    .middle {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEDA Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Simulación de estilo "Elephant" -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Menú Lateral -->
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <ul class="menu-list">
+            <li>ZEDA Gallery</li>
+            <li>Especials</li>
+            <li>Gold</li>
+             <li>Shop</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <!-- Fondo borroso cuando el menú está activo -->
+    <div id="blur-overlay" class="blur-overlay"></div>
+
+    <!-- Barra superior -->
+    <header class="header">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+        <!-- Aquí cambiarás el título por tu imagen -->
+        <div class="title-container">
+            <h1 class="main-title">ZEDA</h1>
+            <h2 class="sub-title">Gallery</h2>
+        </div>
+    </header>
+    
+    <section class="slogan">
+    <h2>ZEDA Art </h2>
+</section>
+<section class="slogan2">
+    <h2>ADEZ Art</h2>
+</section>
+   
+
+
+    <!-- Contenedor Principal -->
+    <main class="products-container">
+
+        <!-- PRODUCTO 1 -->
+        <div class="product-card">
+            <div class="image-frame">
+                <img id="img1" src="white-shirt.png" alt="T-shirt VAJO" />
+            </div>
+
+            <p class="product-name">-Renacer.-</p>
+
+            <div class="color-options">
+                <div class="color-box white" onclick="changeImage('img1','white-shirt.png')"></div>
+                <div class="color-box black" onclick="changeImage('img1','black-shirt.png')"></div>
+            </div>
+        </div>
+
+        <!-- PRODUCTO 2 -->
+        <div class="product-card middle">
+            <div class="image-frame">
+                <img id="img2" src="white-sweater.png" alt="Sweater VAJO" />
+            </div>
+
+            <p class="product-name">Nosotros</p>
+
+            <div class="color-options">
+                <div class="color-box white" onclick="changeImage('img2','white-sweater.png')"></div>
+                <div class="color-box black" onclick="changeImage('img2','black-sweater.png')"></div>
+            </div>
+        </div>
+
+        <!-- PRODUCTO 3 -->
+        <div class="product-card">
+            <div class="image-frame">
+                <img id="img3" src="white-pants.png" alt="Pants VAJO" />
+            </div>
+
+            <p class="product-name">Sons Of The Moon</p>
+
+            <div class="color-options">
+                <div class="color-box white" onclick="changeImage('img3','white-pants.png')"></div>
+                <div class="color-box black" onclick="changeImage('img3','black-pants.png')"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
